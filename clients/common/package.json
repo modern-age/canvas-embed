@@ -5,6 +5,7 @@
   "main": "src/index.ts",
   "scripts": {
     "build:esm": "webpack build",
+    "prepack": "npm run build:esm",
     "start": "echo 'No Start Provided'",
     "test": "TZ=UTC jest ./tests",
     "test:update": "yarn test --updateSnapshot"
