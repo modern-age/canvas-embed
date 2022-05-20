@@ -1,11 +1,12 @@
 import { h } from 'preact'
-import { isSameDay, ParsedSlotsType, SlotType } from '@canvas-medical/embed-common'
+import { Body, isSameDay, ParsedSlotsType, SlotType } from '@canvas-medical/embed-common'
 import { useState, useEffect, useMemo, useCallback } from 'preact/hooks'
 import { useAppContext } from '../../hooks'
-import { Ui } from './ui'
+import { TimeSlotUi } from './ui'
+import { DateSelect } from '../date-select'
 
 export const TimeSlotSelect = () => {
-  const { fetchTimeSlots, date, setDate } = useAppContext()
+  const { fetchTimeSlots, date, setDate, daysToFetch } = useAppContext()
   const [providerTimeSlots, setProviderTimeSlots] = useState<ParsedSlotsType[]>([])
 
   const addTimeSlots = useCallback((newProviderTimeSlots: ParsedSlotsType[]) => {
@@ -72,5 +73,22 @@ slots.sort((slot1, slot2) => {
     }
   }, [minDate, setDate])
 
-  return <Ui timeSlots={dayOfTimeSlots} />
+  const disabledDates = useMemo(() => {
+    const dateIsDisabled = new Set<string>()
+
+    providerTimeSlots.forEach((provider) => {
+      provider.providerSlots.forEach(slot => {
+        const slotDate = new Date(slot.start).toLocaleDateString()
+        dateIsDisabled.add(slotDate)
+      })
+    })
+    return dateIsDisabled;
+  }, [providerTimeSlots])
+
+  return (
+    <Body>
+      <DateSelect disabledDates={disabledDates} maxDate={maxDate} />
+      <TimeSlotUi timeSlots={dayOfTimeSlots} />
+    </Body>
+    )
 }
