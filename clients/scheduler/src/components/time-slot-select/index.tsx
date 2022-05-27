@@ -5,14 +5,20 @@ import { useAppContext } from '../../hooks'
 import { TimeSlotUi } from './ui'
 import { DateSelect } from '../date-select'
 
+const ONE_MINUTE_IN_MILLISECONDS = 60*1000
+
 export const TimeSlotSelect = () => {
-  const { fetchTimeSlots, date, setDate, daysToFetch } = useAppContext()
+  const { fetchTimeSlots, date, setDate, daysToFetch, appointmentBufferInMintues } = useAppContext()
   const [providerTimeSlots, setProviderTimeSlots] = useState<ParsedSlotsType[]>([])
 
   const addTimeSlots = useCallback((newProviderTimeSlots: ParsedSlotsType[]) => {
+    const earliestAvailable = new Date();
+    earliestAvailable.setTime(earliestAvailable.getTime() + (appointmentBufferInMintues*ONE_MINUTE_IN_MILLISECONDS));
+
     const mergedProviderAvailability = newProviderTimeSlots.map((newProvider) => {
       const provider = providerTimeSlots.find((entry) => entry.providerId === newProvider.providerId)
-      const mergedSlots = provider ? [...provider.providerSlots, ...newProvider.providerSlots] : newProvider.providerSlots
+      const availableSlots = newProvider.providerSlots.filter(slot => new Date(slot.start) >= earliestAvailable)
+      const mergedSlots = provider ? [...provider.providerSlots, ...availableSlots] : availableSlots
       return {providerId: newProvider.providerId, providerSlots: mergedSlots}
     })
 
