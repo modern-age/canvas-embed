@@ -20,11 +20,11 @@ import { DateViewContainer, DateScrollButton, DateSelectButton } from './styles'
 import { Calendar } from './calendar'
 
 type DateSelectPropsType = {
-  disabledDates: Set<string>
+  enabledDates: Set<string>
   maxDate?: Date
 }
 
-export const DateSelect = ({ disabledDates, maxDate }: DateSelectPropsType)=> {
+export const DateSelect = ({ enabledDates, maxDate }: DateSelectPropsType)=> {
   const { colors, date, setDate } = useAppContext()
   const [calendarOpen, setCalendarOpen] = useState(false)
   const backDisabled = isTodayOrBefore(date)
@@ -81,7 +81,7 @@ export const DateSelect = ({ disabledDates, maxDate }: DateSelectPropsType)=> {
           <Span fontSize="0.875rem">{`Appointment times shown in ${userTimezone}`}</Span>
         </Box>
       </Box>
-      <Calendar open={calendarOpen} close={() => setCalendarOpen(false)} disabledDates={disabledDates} maxDate={maxDate} />
+      <Calendar open={calendarOpen} close={() => setCalendarOpen(false)} enabledDates={enabledDates} maxDate={maxDate} />
     </Fragment>
   )
 }

@@ -79,7 +79,7 @@ slots.sort((slot1, slot2) => {
     }
   }, [minDate, setDate])
 
-  const disabledDates = useMemo(() => {
+  const enabledDates = useMemo(() => {
     const dateIsDisabled = new Set<string>()
 
     providerTimeSlots.forEach((provider) => {
@@ -93,7 +93,7 @@ slots.sort((slot1, slot2) => {
 
   return (
     <Body>
-      <DateSelect disabledDates={disabledDates} maxDate={maxDate} />
+      <DateSelect enabledDates={enabledDates} maxDate={maxDate} />
       <TimeSlotUi timeSlots={dayOfTimeSlots} />
     </Body>
     )

@@ -12,11 +12,11 @@ import { Ui } from './ui'
 type CalendarPropsType = {
   open: boolean
   close: Function
-  disabledDates: Set<string>
+  enabledDates: Set<string>
   maxDate?: Date
 }
 
-export const Calendar = ({ open, close, disabledDates, maxDate }: CalendarPropsType) => {
+export const Calendar = ({ open, close, enabledDates, maxDate }: CalendarPropsType) => {
   const { date, setDate } = useAppContext()
   const monthsAndYears = getMonthAndYearOptions()
 
@@ -54,7 +54,7 @@ export const Calendar = ({ open, close, disabledDates, maxDate }: CalendarPropsT
       open={open}
       close={close}
       backDisabled={backDisabled}
-      disabledDates={disabledDates}
+      enabledDates={enabledDates}
       forwardDisabled={forwardDisabled}
       maxDate={maxDate}
       navigateForward={navigateForward}
