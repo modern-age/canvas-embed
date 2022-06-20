@@ -13,6 +13,7 @@ export const App = ({
   shadowRoot,
   colors,
   fontFamily,
+  useAppointmentDescription,
 }: IAppProps) => {
   return (
     <AppContainer fontFamily={fontFamily}>
@@ -30,6 +31,7 @@ export const App = ({
         patientKey={patientKey}
         providerIds={providerIds}
         shadowRoot={shadowRoot}
+        useAppointmentDescription={useAppointmentDescription}
       />
     </AppContainer>
   )

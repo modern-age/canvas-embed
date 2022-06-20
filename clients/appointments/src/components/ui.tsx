@@ -30,6 +30,7 @@ type UiPropsType = {
     popoverOpen: boolean
     appointment: AppointmentType
   }
+  useAppointmentDescription?: boolean
 }
 
 export const Ui = ({
@@ -41,6 +42,7 @@ export const Ui = ({
   handleCancel,
   shadowRoot,
   appointmentCancellation,
+  useAppointmentDescription,
 }: UiPropsType) => {
   return (
     <Body>
@@ -63,7 +65,11 @@ export const Ui = ({
                 <H3>{dateString}</H3>
               </Box>
               <Box my="8px">
-                <Span>{`${appointment.display} with ${provider}`}</Span>
+                {useAppointmentDescription ? (
+                  <Span>{`${appointment.description} with ${provider}`}</Span>
+                ) : (
+                  <Span>{`${appointment.display} with ${provider}`}</Span>
+                )}
               </Box>
               <Box>
                 <Button

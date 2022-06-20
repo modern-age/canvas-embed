@@ -9,6 +9,7 @@ export interface IMainAppProps {
   patientKey: string
   providerIds?: string[]
   fontFamily?: string
+  useAppointmentDescription?: boolean
 }
 
 interface IInitializerOnlyProps {

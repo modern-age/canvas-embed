@@ -30,6 +30,7 @@ export const AppointmentsView = ({
   patientId,
   patientKey,
   providerIds,
+  useAppointmentDescription,
   shadowRoot,
 }: IAppProps) => {
   const [loading, setLoading] = useState(true)
@@ -119,6 +120,7 @@ export const AppointmentsView = ({
       handleCancel={handleCancel}
       shadowRoot={shadowRoot}
       appointmentCancellation={appointmentCancellation}
+      useAppointmentDescription={useAppointmentDescription}
     />
   )
 }

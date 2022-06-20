@@ -16,6 +16,7 @@ export const Appointments = (props: IAppointmentProps) => {
     accentColor,
     shadowRoot,
     fontFamily,
+    useAppointmentDescription,
   } = props
   const colors = generateColors(brandColor, accentColor)
   const allValuesProvided = hasAllValues(props)
@@ -35,6 +36,7 @@ export const Appointments = (props: IAppointmentProps) => {
           providerIds={providerIds}
           shadowRoot={shadowRoot}
           fontFamily={fontFamily}
+          useAppointmentDescription={useAppointmentDescription}
         />
       ) : (
         <Error errorMessages={allValuesProvided} />
@@ -54,6 +56,7 @@ export const init = ({
   accentColor,
   rootId,
   fontFamily,
+  useAppointmentDescription,
 }: IInitializerProps) => {
   const appRoot = document.querySelector(`#${rootId}`)
 
@@ -87,6 +90,7 @@ export const init = ({
       accentColor={accentColor}
       shadowRoot={appRoot.shadowRoot}
       fontFamily={fontFamily}
+      useAppointmentDescription={useAppointmentDescription}
     />,
     appRoot.shadowRoot
   )
