@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1652715265240" clover="3.2.0">
+  <project timestamp="1652715265240" name="All files">
+    <metrics statements="217" coveredstatements="216" conditionals="132" coveredconditionals="130" methods="103" coveredmethods="103" elements="452" coveredelements="449" complexity="0" loc="217" ncloc="217" packages="27" files="50" classes="50"/>
+    <package name="src">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="delaractions.d.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/delaractions.d.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="index.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.api">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/api/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="types.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/api/types.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.api.construct-body">
+      <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="index.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/api/construct-body/index.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="4" count="25" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="50" count="6" type="stmt"/>
+      </file>
+      <file name="types.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/api/construct-body/types.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.api.get-appointment">
+      <metrics statements="13" coveredstatements="13" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5"/>
+      <file name="index.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/api/get-appointment/index.ts">
+        <metrics statements="13" coveredstatements="13" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5"/>
+        <line num="6" count="25" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="14" count="5" type="stmt"/>
+        <line num="20" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="29" count="25" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="58" count="1" type="stmt"/>
+      </file>
+      <file name="types.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/api/get-appointment/types.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.api.get-appointments-list">
+      <metrics statements="29" coveredstatements="29" conditionals="28" coveredconditionals="28" methods="12" coveredmethods="12"/>
+      <file name="index.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/api/get-appointments-list/index.ts">
+        <metrics statements="29" coveredstatements="29" conditionals="28" coveredconditionals="28" methods="12" coveredmethods="12"/>
+        <line num="10" count="25" type="stmt"/>
+        <line num="21" count="5" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="24" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="43" count="2" type="cond" truecount="4" falsecount="0"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="45" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="47" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="48" count="3" type="stmt"/>
+        <line num="51" count="2" type="stmt"/>
+        <line num="62" count="2" type="stmt"/>
+        <line num="67" count="4" type="stmt"/>
+        <line num="68" count="4" type="stmt"/>
+        <line num="79" count="25" type="stmt"/>
+        <line num="90" count="2" type="stmt"/>
+        <line num="92" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="93" count="1" type="stmt"/>
+        <line num="95" count="2" type="stmt"/>
+        <line num="105" count="2" type="stmt"/>
+        <line num="110" count="1" type="stmt"/>
+        <line num="121" count="1" type="stmt"/>
+        <line num="123" count="1" type="stmt"/>
+        <line num="132" count="1" type="stmt"/>
+        <line num="143" count="1" type="stmt"/>
+      </file>
+      <file name="types.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/api/get-appointments-list/types.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.api.get-practitioners">
+      <metrics statements="14" coveredstatements="14" conditionals="4" coveredconditionals="4" methods="7" coveredmethods="7"/>
+      <file name="index.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/api/get-practitioners/index.ts">
+        <metrics statements="14" coveredstatements="14" conditionals="4" coveredconditionals="4" methods="7" coveredmethods="7"/>
+        <line num="9" count="26" type="stmt"/>
+        <line num="15" count="8" type="stmt"/>
+        <line num="17" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="22" count="6" type="stmt"/>
+        <line num="29" count="3" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="33" count="26" type="stmt"/>
+        <line num="42" count="7" type="stmt"/>
+        <line num="44" count="7" type="stmt"/>
+        <line num="52" count="5" type="stmt"/>
+        <line num="59" count="6" type="stmt"/>
+      </file>
+      <file name="types.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/api/get-practitioners/types.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.api.get-slots">
+      <metrics statements="21" coveredstatements="20" conditionals="6" coveredconditionals="5" methods="7" coveredmethods="7"/>
+      <file name="index.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/api/get-slots/index.ts">
+        <metrics statements="21" coveredstatements="20" conditionals="6" coveredconditionals="5" methods="7" coveredmethods="7"/>
+        <line num="10" count="25" type="stmt"/>
+        <line num="12" count="25" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="28" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="37" count="3" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
+        <line num="41" count="2" type="stmt"/>
+        <line num="52" count="25" type="stmt"/>
+        <line num="66" count="2" type="stmt"/>
+        <line num="68" count="2" type="stmt"/>
+        <line num="70" count="4" type="stmt"/>
+        <line num="71" count="4" type="stmt"/>
+        <line num="83" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="88" count="1" type="stmt"/>
+        <line num="100" count="1" type="stmt"/>
+      </file>
+      <file name="types.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/api/get-slots/types.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.api.post-appointment">
+      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="index.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/api/post-appointment/index.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="6" count="25" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+      </file>
+      <file name="types.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/api/post-appointment/types.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.api.put-appointment">
+      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="index.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/api/put-appointment/index.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="6" count="25" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+      </file>
+      <file name="types.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/api/put-appointment/types.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.assets">
+      <metrics statements="10" coveredstatements="10" conditionals="6" coveredconditionals="6" methods="5" coveredmethods="5"/>
+      <file name="arrow-back.tsx" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/assets/arrow-back.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="25" type="stmt"/>
+        <line num="4" count="7" type="stmt"/>
+      </file>
+      <file name="arrow-forward.tsx" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/assets/arrow-forward.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="25" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="calendar.tsx" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/assets/calendar.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <line num="9" count="25" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+      </file>
+      <file name="close.tsx" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/assets/close.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="25" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="index.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/assets/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="warning.tsx" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/assets/warning.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="25" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/components/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.components.backdrop">
+      <metrics statements="7" coveredstatements="7" conditionals="8" coveredconditionals="8" methods="3" coveredmethods="3"/>
+      <file name="index.tsx" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/components/backdrop/index.tsx">
+        <metrics statements="7" coveredstatements="7" conditionals="8" coveredconditionals="8" methods="3" coveredmethods="3"/>
+        <line num="17" count="25" type="stmt"/>
+        <line num="19" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="25" type="stmt"/>
+        <line num="35" count="3" type="cond" truecount="4" falsecount="0"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.boxes">
+      <metrics statements="16" coveredstatements="16" conditionals="20" coveredconditionals="19" methods="11" coveredmethods="11"/>
+      <file name="index.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/components/boxes/index.ts">
+        <metrics statements="16" coveredstatements="16" conditionals="20" coveredconditionals="19" methods="11" coveredmethods="11"/>
+        <line num="20" count="25" type="stmt"/>
+        <line num="23" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="28" count="25" type="stmt"/>
+        <line num="39" count="25" type="stmt"/>
+        <line num="40" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="42" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="43" count="11" type="cond" truecount="3" falsecount="0"/>
+        <line num="44" count="11" type="cond" truecount="3" falsecount="0"/>
+        <line num="45" count="11" type="cond" truecount="3" falsecount="0"/>
+        <line num="46" count="11" type="cond" truecount="3" falsecount="0"/>
+        <line num="47" count="11" type="stmt"/>
+        <line num="49" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="52" count="25" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="60" count="25" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.buttons">
+      <metrics statements="9" coveredstatements="9" conditionals="14" coveredconditionals="14" methods="7" coveredmethods="7"/>
+      <file name="index.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/components/buttons/index.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="14" coveredconditionals="14" methods="7" coveredmethods="7"/>
+        <line num="10" count="25" type="stmt"/>
+        <line num="16" count="10" type="stmt"/>
+        <line num="19" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="23" count="10" type="cond" truecount="3" falsecount="0"/>
+        <line num="24" count="10" type="cond" truecount="3" falsecount="0"/>
+        <line num="25" count="10" type="cond" truecount="3" falsecount="0"/>
+        <line num="26" count="10" type="cond" truecount="3" falsecount="0"/>
+        <line num="34" count="10" type="stmt"/>
+        <line num="38" count="25" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.cancellation-display">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="index.tsx" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/components/cancellation-display/index.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="12" count="25" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.error">
+      <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <file name="index.tsx" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/components/error/index.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="11" count="25" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.header">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="index.tsx" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/components/header/index.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="14" count="25" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+      </file>
+      <file name="styles.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/components/header/styles.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="25" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="11" count="25" type="stmt"/>
+        <line num="18" count="25" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.iconography">
+      <metrics statements="14" coveredstatements="14" conditionals="24" coveredconditionals="24" methods="12" coveredmethods="12"/>
+      <file name="index.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/components/iconography/index.ts">
+        <metrics statements="14" coveredstatements="14" conditionals="24" coveredconditionals="24" methods="12" coveredmethods="12"/>
+        <line num="9" count="25" type="stmt"/>
+        <line num="14" count="3" type="cond" truecount="3" falsecount="0"/>
+        <line num="15" count="3" type="cond" truecount="3" falsecount="0"/>
+        <line num="16" count="3" type="cond" truecount="3" falsecount="0"/>
+        <line num="17" count="3" type="cond" truecount="3" falsecount="0"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="33" count="25" type="stmt"/>
+        <line num="40" count="3" type="cond" truecount="3" falsecount="0"/>
+        <line num="41" count="3" type="cond" truecount="3" falsecount="0"/>
+        <line num="42" count="3" type="cond" truecount="3" falsecount="0"/>
+        <line num="43" count="3" type="cond" truecount="3" falsecount="0"/>
+        <line num="48" count="3" type="stmt"/>
+        <line num="52" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.loader">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="index.tsx" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/components/loader/index.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="16" count="25" type="stmt"/>
+        <line num="26" count="25" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="39" count="25" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.popover">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/components/popover/index.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="25" type="stmt"/>
+        <line num="23" count="25" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.typograhpy">
+      <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
+      <file name="index.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/components/typograhpy/index.ts">
+        <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
+        <line num="8" count="25" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="16" count="25" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="22" count="25" type="stmt"/>
+        <line num="27" count="25" type="stmt"/>
+        <line num="35" count="25" type="stmt"/>
+        <line num="36" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="37" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="41" count="25" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.utils">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/utils/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.utils.constants">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="appointments.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/utils/constants/appointments.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="25" type="stmt"/>
+        <line num="6" count="25" type="stmt"/>
+        <line num="26" count="25" type="stmt"/>
+      </file>
+      <file name="index.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/utils/constants/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.utils.dates">
+      <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+      <file name="format.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/utils/dates/format.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="6" count="25" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="11" count="25" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="15" count="25" type="stmt"/>
+        <line num="16" count="33" type="stmt"/>
+      </file>
+      <file name="functions.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/utils/dates/functions.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="4" count="25" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="11" count="25" type="stmt"/>
+        <line num="12" count="10" type="stmt"/>
+      </file>
+      <file name="index.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/utils/dates/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.utils.functions">
+      <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+      <file name="index.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/utils/functions/index.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="3" count="25" type="stmt"/>
+        <line num="4" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.utils.styles">
+      <metrics statements="14" coveredstatements="14" conditionals="6" coveredconditionals="6" methods="4" coveredmethods="4"/>
+      <file name="colors.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/utils/styles/colors.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="25" type="stmt"/>
+        <line num="10" count="25" type="stmt"/>
+      </file>
+      <file name="functions.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/utils/styles/functions.ts">
+        <metrics statements="10" coveredstatements="10" conditionals="6" coveredconditionals="6" methods="4" coveredmethods="4"/>
+        <line num="5" count="25" type="stmt"/>
+        <line num="6" count="85" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="25" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="13" count="25" type="stmt"/>
+        <line num="14" count="84" type="stmt"/>
+        <line num="17" count="25" type="stmt"/>
+        <line num="21" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="22" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="4" type="stmt"/>
+      </file>
+      <file name="index.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/utils/styles/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="size.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/utils/styles/size.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="25" type="stmt"/>
+        <line num="2" count="25" type="stmt"/>
+      </file>
+      <file name="types.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/utils/styles/types.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.utils.types">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="application.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/utils/types/application.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="index.ts" path="/home/tristan/foundry/repos/canvas-embed/clients/common/src/utils/types/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+  </project>
+</coverage>
