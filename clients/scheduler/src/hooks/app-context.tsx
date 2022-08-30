@@ -100,7 +100,6 @@ export const ContextWrapper = ({ children, values }: ContextWrapperProps) => {
   const [initialized, setInitialized] = useState<boolean>(false)
 
   const handleError: HandleErrorType = (error, msg) => {
-    // console.log(error, msg)
     values.callbacks?.onError(error, msg)
     if (msg && typeof msg === 'string') setError(msg)
   }
@@ -112,7 +111,6 @@ export const ContextWrapper = ({ children, values }: ContextWrapperProps) => {
 
   const fetchTimeSlots = useCallback(
     (setTimeSlots: SetTimeSlotsType) => {
-      // console.log("timeSlot: ", preloadTimeSlot)
       getTimeSlots({
         setLoading,
         onError: handleError,
