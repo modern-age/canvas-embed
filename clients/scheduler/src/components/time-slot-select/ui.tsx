@@ -39,7 +39,9 @@ export const TimeSlotUi = ({ timeSlots }: UiPropsType) => {
     if (preloadBooking && preloadBooking.start && preloadBooking.start !== timeSlot.start) {
       const bookDate = new Date(preloadBooking.start)
       // If there's pre-booking data that hasn't been set yet
+      console.log("setting preload date", 2)
       if (bookDate.getTime() === date.getTime()) {
+      console.log("setting preload date", 3)
         selectTimeSlot(preloadBooking)
       }
     }
