@@ -114,7 +114,7 @@ export const TimeSlotSelect = () => {
   const previousInitializedValue = usePreviousValue(initialized)
 
   useEffect(() => {
-    if (initialized) {
+    if (initialized && dayOfTimeSlots.length > 0) {
       callbacks?.onDateChange?.({
         dayOfTimeSlots: dayOfTimeSlots.map(({ providerId, ...rest }) => ({
           ...rest,
@@ -143,10 +143,11 @@ export const TimeSlotSelect = () => {
       const bookDate = new Date(preloadBooking.start)
       // If there's pre-booking data that hasn't been set yet
       if (bookDate.getTime() !== date.getTime()) {
+        console.log("setting preload date", 0)
         setDate(bookDate)
       }
     }
-  }, [preloadBooking])
+  }, [date, preloadBooking])
 
   const enabledDates = useMemo(() => {
     const dateIsDisabled = new Set<string>()

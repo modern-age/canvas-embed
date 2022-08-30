@@ -100,6 +100,7 @@ export const ContextWrapper = ({ children, values }: ContextWrapperProps) => {
   const [initialized, setInitialized] = useState<boolean>(false)
 
   const handleError: HandleErrorType = (error, msg) => {
+    // console.log(error, msg)
     values.callbacks?.onError(error, msg)
     if (msg && typeof msg === 'string') setError(msg)
   }
@@ -111,6 +112,7 @@ export const ContextWrapper = ({ children, values }: ContextWrapperProps) => {
 
   const fetchTimeSlots = useCallback(
     (setTimeSlots: SetTimeSlotsType) => {
+      // console.log("timeSlot: ", preloadTimeSlot)
       getTimeSlots({
         setLoading,
         onError: handleError,
@@ -182,6 +184,9 @@ export const ContextWrapper = ({ children, values }: ContextWrapperProps) => {
   const fetchProviders = useCallback(() => {
     getPractitioners({
       onError: handleError,
+      onLoad: (e, d) => console.log(e, d),
+      setInitialized: (e, d) => console.log(e, d),
+      setLoading,
       setProviders,
       api: values.api,
       patientId: values.patientId,
