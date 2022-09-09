@@ -10,6 +10,8 @@ export const findAppointment = ({
   appointments,
   timeSlot,
 }: FindAppointmentParamsType) => {
+  console.log(appointments, "appts");
+  
   const appointment = appointments.entry.find(({ resource }) => {
     return (
       checkDateTimeMatch(resource.start, timeSlot.start) &&
@@ -25,6 +27,7 @@ export const findAppointment = ({
     setLoading(false)
   }
 }
+console.log("foo");
 
 export const getScheduledAppointment = ({
   setLoading,
@@ -46,7 +49,7 @@ export const getScheduledAppointment = ({
         practitioner: timeSlot.provider.id,
       },
     })
-    .then(response =>
+    .then(response => 
       findAppointment({
         setLoading,
         onError,
@@ -55,5 +58,5 @@ export const getScheduledAppointment = ({
         timeSlot,
       })
     )
-    .catch(e => onError(e, 'Error Fetching Appointment'))
+    .catch(e => console.log(e, "ERROR"))
 }
