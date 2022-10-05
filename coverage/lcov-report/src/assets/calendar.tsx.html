@@ -1,0 +1,163 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for src/assets/calendar.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/assets</a> calendar.tsx</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>2/2</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>6/6</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>1/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>2/2</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input oninput="onInput()" type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { h } from 'preact'
+&nbsp;
+type CalendarPropsType = {
+  height?: number
+  width?: number
+  fill?: string
+}
+&nbsp;
+export const Calendar = ({ height, width, fill }: CalendarPropsType) =&gt; (
+  &lt;svg
+    clip-rule="evenodd"
+    fill-rule="evenodd"
+    stroke-linejoin="round"
+    stroke-miterlimit="2"
+    width={width || 20}
+    height={height || 21}
+    viewBox="0 0 34 36"
+    xmlns="http://www.w3.org/2000/svg"
+    fill={fill || '#000'}
+  &gt;
+    &lt;path
+      d="m25.763 0c.744 0 1.341.594 1.354 1.341v.023.834h2.595c2.383 0 4.287 1.931 4.288 4.286l-.001.072v25.086c0 2.364-1.916 4.319-4.254 4.357l-.071.001h-25.349c-2.346 0-4.286-1.931-4.324-4.286l-.001-.072v-25.048c0-2.364 1.917-4.319 4.254-4.358h.071 2.595v-.872c0-.758.602-1.364 1.354-1.364.745 0 1.342.594 1.354 1.341v.023.872h6.055v-.872c0-.758.602-1.364 1.354-1.364.745 0 1.342.594 1.354 1.341v.023.872h6.018v-.872c0-.758.602-1.364 1.354-1.364zm5.566 11.861h-28.621v19.781c0 .901.737 1.653 1.628 1.668h.027 25.349c.893 0 1.64-.743 1.618-1.64l-.001-.028zm-21.062 15.499c.595 0 1.08.481 1.091 1.078v.021 1.175c0 .599-.477 1.087-1.069 1.099h-.022-3.272c-.594 0-1.079-.481-1.09-1.078v-.021-1.175c0-.599.477-1.087 1.069-1.099h.021zm16.775 0c.632 0 1.117.482 1.128 1.078v.021 1.175c0 .599-.478 1.087-1.07 1.098l-.021.001h-3.272c-.594 0-1.079-.481-1.09-1.078v-.021-1.175c0-.599.477-1.087 1.069-1.099h.021zm-8.387 0c.594 0 1.079.481 1.09 1.078v.021 1.175c0 .599-.477 1.087-1.069 1.098l-.021.001h-3.272c-.595 0-1.079-.481-1.091-1.078v-.021-1.175c0-.599.477-1.087 1.069-1.099h.022zm-8.388-6.404c.595 0 1.08.481 1.091 1.078v.021 1.175c0 .599-.477 1.087-1.069 1.098l-.022.001-3.272-.001c-.594 0-1.079-.481-1.09-1.077v-.022-1.174c0-.599.477-1.087 1.069-1.099h.021zm16.775 0c.632 0 1.117.481 1.128 1.078v.021 1.174c0 .599-.478 1.088-1.07 1.099h-.021-3.272c-.594 0-1.079-.481-1.09-1.077v-.022-1.174c0-.599.477-1.087 1.069-1.099h.021zm-8.387 0c.594 0 1.079.481 1.09 1.077v.022 1.174c0 .599-.477 1.088-1.069 1.099h-.021-3.272c-.595 0-1.079-.481-1.091-1.077v-.022-1.174c0-.599.477-1.087 1.069-1.099h.022zm-8.388-6.366c.595 0 1.08.481 1.091 1.077v.022 1.174c0 .599-.477 1.088-1.069 1.099h-.022-3.272c-.594 0-1.079-.481-1.09-1.078v-.021-1.175c0-.599.477-1.087 1.069-1.098h.021zm16.775 0c.632 0 1.117.481 1.127 1.077l.001.021v1.175c0 .599-.478 1.087-1.07 1.099h-.021-3.272c-.595 0-1.079-.481-1.09-1.078l-.001-.021.001-1.175c0-.599.477-1.087 1.069-1.098h.021zm-8.387 0c.594 0 1.079.481 1.09 1.077v.021 1.175c0 .599-.477 1.087-1.069 1.099h-.021-3.272c-.595 0-1.079-.481-1.091-1.078v-.021-1.175c0-.599.477-1.087 1.069-1.098h.022zm-11.697-9.664h-2.595c-.894 0-1.64.706-1.655 1.639v2.606h28.734v-2.577c0-.901-.737-1.652-1.628-1.667l-.027-.001h-2.595v.872c0 .758-.602 1.364-1.354 1.364-.744 0-1.341-.594-1.354-1.34v-.024-.872h-6.055v.872c0 .758-.602 1.364-1.354 1.364-.744 0-1.341-.594-1.354-1.34v-.024-.872h-6.055v.872c0 .758-.602 1.364-1.354 1.364-.744 0-1.342-.594-1.354-1.34v-.024z"
+      fill-rule="nonzero"
+    /&gt;
+  &lt;/svg&gt;
+)
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at Wed Oct 05 2022 21:23:40 GMT+0000 (Coordinated Universal Time)
+            </div>
+        <script src="../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
+    </body>
+</html>
+    
