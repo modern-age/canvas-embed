@@ -8,6 +8,7 @@ import {
   SlotType,
 } from '@canvas-medical/embed-common'
 
+
 type OnDateChangeParam = {
   dayOfTimeSlots: { provider: ProvidersType; providerSlots: SlotType[] }[]
   isFirstDateViewed: boolean
@@ -63,6 +64,8 @@ export interface IInitializerProps
 }
 
 export interface ISchedulerProps extends IMainAppProps, IInitializerOnlyProps {
+  timeSlot: TimeSlotType
+  screen: string
   shadowRoot: any
 }
 
