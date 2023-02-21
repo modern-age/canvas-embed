@@ -1,4 +1,5 @@
 import { h, createContext, ComponentChildren } from 'preact'
+import memoryCache from 'memory-cache';
 import { useState, useMemo, useContext, useCallback } from 'preact/hooks'
 import {
   generateColors,
@@ -111,22 +112,34 @@ export const ContextWrapper = ({ children, values }: ContextWrapperProps) => {
     setPreloadTimeSlot(blankTimeSlot())
   }
 
+
+
   const fetchTimeSlots = useCallback(
     (setTimeSlots: SetTimeSlotsType) => {
-      const [timeSlotsData, setTimeSlotsData] = useState<TimeSlotType[]>([]);
-      const [isCacheReady, setIsCacheReady] = useState(false);
+      // Define key for the cache
+      const cacheKey = `timeSlots:${JSON.stringify({
+        providerIds: values.providerIds,
+        locationId: values.locationId,
+        patientId: values.patientId,
+        patientKey: values.patientKey,
+        date,
+        duration: values.duration,
+      })}`;
 
-      if (isCacheReady && timeSlotsData.length > 0) {
-        setTimeSlots(timeSlotsData);
+      // Check if there is cached data available, and if so, use it immediately
+      const cachedData = memoryCache.get(cacheKey) as TimeSlotType[] | null;
+      if (cachedData !== null) {
+        setTimeSlots(cachedData);
         return;
       }
 
+      // Define callback function to update cache and time slots
       const handleSetTimeSlots = (data: TimeSlotType[]) => {
-        setTimeSlotsData(data);
-        setIsCacheReady(true);
         setTimeSlots(data);
+        memoryCache.put(cacheKey, data, values.daysToFetch * 24 * 60 * 60 * 1000);
       };
 
+      // Fetch time slots data from server
       getTimeSlots({
         setLoading,
         onError: handleError,
@@ -145,6 +158,7 @@ export const ContextWrapper = ({ children, values }: ContextWrapperProps) => {
     [date, values, initialized]
   );
 
+
   const fetchScheduledAppointment = useCallback(
     (setAppointmentId: (appointmentId: string) => void) => {
       getScheduledAppointment({
@@ -161,20 +175,31 @@ export const ContextWrapper = ({ children, values }: ContextWrapperProps) => {
     [date, timeSlot, values]
   )
 
-  const createAppointment = useCallback(() => {
-    postAppointment({
-      setScreen: () => setScreen('CONFIRM'),
-      onError: handleError,
-      setLoading,
-      appointmentCoding: values.appointmentCoding,
-      description: values.description,
-      locationId: values.locationId,
-      timeSlot,
-      patientId: values.patientId,
-      patientKey: values.patientKey,
-      api: values.api,
-    })
-  }, [timeSlot, values])
+const createAppointment = useCallback(() => {
+  postAppointment({
+    setScreen: () => setScreen('CONFIRM'),
+    onError: handleError,
+    setLoading,
+    appointmentCoding: values.appointmentCoding,
+    description: values.description,
+    locationId: values.locationId,
+    timeSlot,
+    patientId: values.patientId,
+    patientKey: values.patientKey,
+    api: values.api,
+    onComplete: () => {
+      const cacheKey = `timeSlots:${JSON.stringify({
+        providerIds: values.providerIds,
+        locationId: values.locationId,
+        patientId: values.patientId,
+        patientKey: values.patientKey,
+        date,
+        duration: values.duration,
+      })}`;
+      memoryCache.del(cacheKey);
+    },
+  });
+}, [timeSlot, values]);
 
   const cancelAppointment = useCallback(
     (appointmentId: string, onComplete: () => void) => {

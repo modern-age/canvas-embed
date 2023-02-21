@@ -65,7 +65,8 @@
   },
   "dependencies": {
     "@canvas-medical/embed-common": "modern-age/canvas-embed#canvas-medical-embed-common-v0.1.4-gitpkg",
-    "preact": "^10.6.5"
+    "preact": "^10.6.5",
+    "memory-cache": "^0.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.2",
