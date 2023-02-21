@@ -120,10 +120,6 @@ export const ContextWrapper = ({ children, values }: ContextWrapperProps) => {
       const cacheKey = `timeSlots:${JSON.stringify({
         providerIds: values.providerIds,
         locationId: values.locationId,
-        patientId: values.patientId,
-        patientKey: values.patientKey,
-        date,
-        duration: values.duration,
       })}`;
 
       // Check if there is cached data available, and if so, use it immediately
@@ -190,10 +186,6 @@ const createAppointment = useCallback(() => {
       const cacheKey = `timeSlots:${JSON.stringify({
         providerIds: values.providerIds,
         locationId: values.locationId,
-        patientId: values.patientId,
-        patientKey: values.patientKey,
-        date,
-        duration: values.duration,
       })}`;
       memoryCache.del(cacheKey);
     },
