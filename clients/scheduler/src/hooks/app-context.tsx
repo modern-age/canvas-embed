@@ -111,25 +111,39 @@ export const ContextWrapper = ({ children, values }: ContextWrapperProps) => {
     setPreloadTimeSlot(blankTimeSlot())
   }
 
-  const fetchTimeSlots = useCallback(
-    (setTimeSlots: SetTimeSlotsType) => {
-      getTimeSlots({
-        setLoading,
-        onError: handleError,
-        providerIds: values.providerIds,
-        api: values.api,
-        locationId: values.locationId,
-        patientId: values.patientId,
-        patientKey: values.patientKey,
-        date,
-        duration: values.duration,
-        setTimeSlots,
-        setProviders,
-        daysToFetch: values.daysToFetch,
-      })
-    },
-    [date, values, initialized]
-  )
+const fetchTimeSlots = useCallback(
+  (setTimeSlots: SetTimeSlotsType) => {
+    const [timeSlotsData, setTimeSlotsData] = useState<TimeSlotType[]>([]);
+    const [isCacheReady, setIsCacheReady] = useState(false);
+
+    if (isCacheReady && timeSlotsData.length > 0) {
+      setTimeSlots(timeSlotsData);
+      return;
+    }
+
+    const handleSetTimeSlots = (data: TimeSlotType[]) => {
+      setTimeSlotsData(data);
+      setIsCacheReady(true);
+      setTimeSlots(data);
+    };
+
+    getTimeSlots({
+      setLoading,
+      onError: handleError,
+      providerIds: values.providerIds,
+      api: values.api,
+      locationId: values.locationId,
+      patientId: values.patientId,
+      patientKey: values.patientKey,
+      date,
+      duration: values.duration,
+      setTimeSlots: handleSetTimeSlots,
+      setProviders,
+      daysToFetch: values.daysToFetch,
+    });
+  },
+  [date, values, initialized]
+);
 
   const fetchScheduledAppointment = useCallback(
     (setAppointmentId: (appointmentId: string) => void) => {
