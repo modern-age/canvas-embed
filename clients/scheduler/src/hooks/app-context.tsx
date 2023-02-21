@@ -136,10 +136,9 @@ export const ContextWrapper = ({ children, values }: ContextWrapperProps) => {
       // Define callback function to update cache and time slots
       const handleSetTimeSlots = (data: TimeSlotType[]) => {
         setTimeSlots(data);
-        memoryCache.put(cacheKey, data, values.daysToFetch * 24 * 60 * 60 * 1000);
+        memoryCache.put(cacheKey, data, values.daysToFetch);
       };
 
-      // Fetch time slots data from server
       getTimeSlots({
         setLoading,
         onError: handleError,
