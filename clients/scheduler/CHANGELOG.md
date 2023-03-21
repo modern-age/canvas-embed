@@ -128,3 +128,8 @@
 ### Added
 
 - Include appointment ID in body when cancelling, needed for caching work
+## [0.1.20] - 2023-03-20
+
+### Added
+
+- Include appointment ID in app context
