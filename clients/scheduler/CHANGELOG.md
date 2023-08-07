@@ -140,8 +140,13 @@
 ### Changed
 
 - Bump @canvas-medical/embed-common to v0.1.8
+
 ## [0.1.22] - 2023-03-27
 
 ### Changed
 
 - Bump @canvas-medical/embed-common to v0.1.9
+
+### Changed
+
+- Accepts startDate param to determine what calendar dates are blocked & displayed in the scheduler
