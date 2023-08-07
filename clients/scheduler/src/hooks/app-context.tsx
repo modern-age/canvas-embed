@@ -11,7 +11,7 @@ import {
   HandleErrorType,
   TimeSlotType,
 } from '@canvas-medical/embed-common'
-import { IAppContext } from '../utils'
+import { IAppContext, isEarliestDateOrBefore } from '../utils'
 import { getPractitioners } from '@canvas-medical/embed-common/src/api/get-practitioners'
 
 type ContextWrapperProps = {
@@ -106,7 +106,13 @@ export const ContextWrapper = ({ children, values }: ContextWrapperProps) => {
         utcDate.getTime() + utcDate.getTimezoneOffset() * 60000
       )
 
-      return localDate
+      const today = new Date()
+
+      if (isEarliestDateOrBefore(localDate, today)) {
+        return today
+      } else {
+        return localDate
+      }
     } else {
       return null
     }
